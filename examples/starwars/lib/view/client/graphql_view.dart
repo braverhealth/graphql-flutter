@@ -6,9 +6,9 @@ import 'package:starwars_app/utils/graphql_provider.dart';
 /// We use the cache for all state management.
 class ClientProvider extends StatelessWidget {
   ClientProvider({
-    @required this.child,
-    @required String uri,
-    String subscriptionUri,
+    required this.child,
+    required String uri,
+    required String subscriptionUri,
   }) : client = clientFor(
           uri: uri,
           subscriptionUri: subscriptionUri,

@@ -4,11 +4,12 @@ description: An example graphql_flutter application utilizing graphql_starwars_t
 publish_to: none
 
 environment:
-  sdk: ">=2.13.0 <4.0.0"
+  sdk: ">=2.17.0 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
+  connectivity_plus: 6.0.5
   graphql_flutter:
     path: ../../packages/graphql_flutter
   graphql: ^5.1.2-beta.1

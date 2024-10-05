@@ -4,7 +4,7 @@ import 'package:graphql_flutter/graphql_flutter.dart';
 import '../../model/episode/episode.dart';
 
 class HeroForEpisode extends StatelessWidget {
-  const HeroForEpisode({@required this.episode});
+  const HeroForEpisode({required this.episode});
 
   final Episode episode;
 
@@ -28,7 +28,7 @@ class HeroForEpisode extends StatelessWidget {
           }
         '''),
         variables: <String, String>{
-          'ep': episodeToJson(episode),
+          'ep': episodeToJson(episode)!,
         },
       ),
       builder: (

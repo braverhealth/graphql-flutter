@@ -16,9 +16,11 @@ class EpisodePage extends StatefulWidget {
 class _EpisodePageState extends State<EpisodePage> {
   Episode currentEpisode = Episode.EMPIRE;
 
-  void _selectEpisode(Episode ep) {
+  void _selectEpisode(Episode? ep) {
     setState(() {
-      currentEpisode = ep;
+      if (ep != null) {
+        currentEpisode = ep;
+      }
     });
   }
 
@@ -44,12 +46,12 @@ class _EpisodePageState extends State<EpisodePage> {
   }
 }
 
-typedef OnSelect = void Function(Episode episode);
+typedef OnSelect = void Function(Episode? episode);
 
 class EpisodeSelect extends StatelessWidget {
   const EpisodeSelect({
-    @required this.onSelect,
-    @required this.selected,
+    required this.onSelect,
+    required this.selected,
   });
 
   final OnSelect onSelect;

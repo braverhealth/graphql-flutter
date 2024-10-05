@@ -7,7 +7,7 @@ enum Episode {
   JEDI,
 }
 
-String episodeToJson(Episode e) {
+String? episodeToJson(Episode e) {
   switch (e) {
     case Episode.NEWHOPE:
       return 'NEWHOPE';
@@ -20,7 +20,7 @@ String episodeToJson(Episode e) {
   }
 }
 
-String episodeToDisplay(Episode e) {
+String? episodeToDisplay(Episode e) {
   switch (e) {
     case Episode.NEWHOPE:
       return 'EP. IV: A NEW HOPE';
@@ -33,7 +33,7 @@ String episodeToDisplay(Episode e) {
   }
 }
 
-Episode episodeFromJson(String e) {
+Episode? episodeFromJson(String e) {
   switch (e) {
     case 'NEWHOPE':
       return Episode.NEWHOPE;

@@ -1,13 +1,11 @@
-import 'package:flutter/material.dart';
-
 import 'package:starwars_app/model/episode/episode.dart';
 
 class Review {
   Review({
-    @required this.episode,
-    @required this.stars,
-    @required this.id,
-    this.commentary,
+    required this.episode,
+    required this.stars,
+    required this.id,
+    required this.commentary,
   });
 
   String id;
@@ -16,9 +14,9 @@ class Review {
   String commentary;
 
   Review copyWith({
-    Episode episode,
-    int stars,
-    String commentary,
+    Episode? episode,
+    int? stars,
+    String? commentary,
   }) {
     return Review(
       id: id,
@@ -29,8 +27,6 @@ class Review {
   }
 
   Map<String, dynamic> toJson() {
-    assert(episode != null && stars != null);
-
     return <String, dynamic>{
       'episode': episodeToJson(episode),
       'stars': stars,
@@ -40,7 +36,7 @@ class Review {
 
   static Review fromJson(Map<String, dynamic> map) => Review(
         id: map['id'],
-        episode: episodeFromJson(map['episode'] as String),
+        episode: episodeFromJson(map['episode'] as String)!,
         stars: map['stars'] as int,
         commentary: map['commentary'] as String,
       );

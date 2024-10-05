@@ -3,8 +3,8 @@ import 'package:starwars_app/model/review/review.dart';
 
 class DisplayReviews extends StatefulWidget {
   const DisplayReviews({
-    Key key,
-    @required this.reviews,
+    required this.reviews,
+    Key? key,
   }) : super(key: key);
 
   final List<Map<String, dynamic>> reviews;

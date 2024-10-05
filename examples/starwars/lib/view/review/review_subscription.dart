@@ -27,10 +27,10 @@ class ReviewFeed extends StatelessWidget {
             child: const CircularProgressIndicator(),
           );
         }
-        return ResultAccumulator.appendUniqueEntries(
-          latest: result.data,
+        return ResultAccumulator<Map<String, dynamic>>.appendUniqueEntries(
+          latest: result.data!,
           builder: (context, {results}) => DisplayReviews(
-            reviews: results.reversed.toList(),
+            reviews: results!.reversed.toList(),
           ),
         );
       },
