@@ -1,5 +1,5 @@
 name: starwars_app
-description: An example graphql_flutter application utilizing graphql_starwars_test_server
+description: An example graphql_flutter application for a Star Wars GraphQL backend
 
 publish_to: none
 
